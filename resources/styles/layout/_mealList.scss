@@ -1,0 +1,28 @@
+.today {
+  @include font($skinny-font, 2em);
+
+}
+
+meal-display {
+  h3 {
+    @include font($uppercase-font, 1.5em);
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+  .mealInfo {
+    @include font($serif-font, 1.2em);
+    display: flex;
+    flex-flow: column;
+    padding: 0 20px;
+    margin-top: 0px;
+    button {
+      @extend %button;
+      @include size(150px, 30px);
+      align-self: flex-end;
+      margin-right: 100px;
+    }
+  }
+  &:last-child {
+    margin-bottom: 100px;
+  }
+}

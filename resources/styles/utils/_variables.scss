@@ -11,14 +11,22 @@ $brand-color: #D5595F;
 // #DE938D
 //
 // 8DC6C2
+$text-color: #051715;
+
 
 @mixin size($width, $height) {
   width: $width;
   height: $height;
 }
 
-@mixin font($family, $size:1em, $color:black){
+@mixin font($family, $size:1em, $color:$text-color){
   font-family: $family;
   font-size: $size;
   color: $color;
+}
+
+%button {
+  @include font($uppercase-font);
+  background: rgba(0,0,0,0.00);
+  border: 1px solid black;
 }

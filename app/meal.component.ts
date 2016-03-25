@@ -8,10 +8,10 @@ import { EditMealDetailsComponent } from './edit-meal-details.component';
   outputs: ['onMealSelect'],
   directives: [EditMealDetailsComponent],
   template: `
-  <div>
+  <div class="mealsInList">
     <h3  (click)="clickShowInfo()"> {{ meal.name }}</h3>
     <div *ngIf="showInfo" class="mealInfo">
-      <p>{{ meal.calories }}</p>
+      <p>{{ meal.calories + " calories"}}</p>
       <p>{{ meal.details }}</p>
       <button (click)="editInfo(meal)">Edit</button>
     </div>

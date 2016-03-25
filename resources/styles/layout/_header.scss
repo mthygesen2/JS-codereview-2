@@ -1,0 +1,14 @@
+.brandName {
+  @include size(auto, auto);
+  align-self: center;
+  margin: 150px auto;
+  @include font($skinny-font, 2em, $brand-color);
+  letter-spacing: 1em;
+  padding-left: 0.5em;
+  @media screen and (min-width: 600px) {
+    @include font($skinny-font, 3em, $brand-color);
+  }
+  @media screen and (min-width: 800px) {
+    @include font($skinny-font, 4em, $brand-color);
+  }
+}

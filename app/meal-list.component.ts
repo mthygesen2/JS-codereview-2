@@ -11,17 +11,19 @@ import { HealthyPipe } from './healthy.pipe';
   pipes: [HealthyPipe],
   directives: [MealComponent, NewMealComponent, EditMealDetailsComponent],
   template: `
-    <select (change)="onChange($event.target.value)" class="filter">
-    <option value="all">All Meals</option>
-    <option value="healthy">Low Calorie</option>
-    <option value="unhealthy">High Calories</option>
-    </select>
+
     <new-meal (onSubmitNewMeal)="createMeal($event)">
     </new-meal>
-    <meal-display *ngFor="#currentMeal of mealList | healthy:filterHealthy"
-    (click)="mealClicked(currentMeal)"
-    [class.selected]="currentMeal === selectedMeal"
-    [meal]="currentMeal" >
+    <select (change)="onChange($event.target.value)" class="filter">
+      <option value="all">All Meals</option>
+      <option value="healthy">Low Calorie</option>
+      <option value="unhealthy">High Calories</option>
+    </select>
+    <p class="today">Today's Meals:</p>
+    <meal-display *ngFor="#currentMeal of mealList |      healthy:filterHealthy"
+      (click)="mealClicked(currentMeal)"
+      [class.selected]="currentMeal === selectedMeal"
+      [meal]="currentMeal" >
     </meal-display>
   `
 })

@@ -1,0 +1,53 @@
+
+meal-list {
+  border: 1px solid yellow;
+  background-color: rgba(white, 0.5);
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  @include size(100%, auto);
+  @media screen and (min-width: 800px){
+    width: 80%;
+    margin: auto;
+    padding:20px;
+  }
+  select {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     @include size(200px, 50px);
+     @include font($uppercase-font);
+     background: url("https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-128.png") no-repeat;
+     background-position: 90% 60%;
+     background-size: 30px;
+     padding-left: 15px;
+     border-radius: 0;
+  }
+}
+
+.meal-form {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  margin: 0 auto 25px auto;
+  @include font($skinny-font);
+  h2 {
+    @include font($uppercase-font, 1.8em, $brand-color);
+    font-weight: normal;
+    margin-top: 0;
+  }
+  input {
+    @include size(300px, 40px);
+    margin: 4px auto;
+  }
+  button {
+    @include size(150px, 40px);
+    margin: 4px auto;
+    @extend %button;
+  }
+}
+
+.mealsInList {
+  border-bottom: 1px solid black;
+
+}
