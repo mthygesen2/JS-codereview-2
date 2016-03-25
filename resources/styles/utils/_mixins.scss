@@ -25,6 +25,7 @@
     @include font($uppercase-font, 1.8em, $brand-color);
     font-weight: normal;
     margin-top: 0;
+    padding-left: 20px;
   }
   input {
     @include size(300px, 40px);

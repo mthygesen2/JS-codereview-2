@@ -17,9 +17,9 @@ export class AppComponent {
   public meals: Meal[];
     constructor(){
       this.meals = [
-        new Meal("Cheese Pizza", "It was great", 543),
-        new Meal("Larb", "Tasty", 423),
-        new Meal("Hotdog", "Yuck", 698),
+        new Meal("Quinoa Salad", "This was amazing. I would eat it again.", 243),
+        new Meal("Green Smoothie", "Super tasty, easty to make, great for breakfast", 123),
+        new Meal("Cheeseburger", "Worth it", 698),
       ];
     }
 }

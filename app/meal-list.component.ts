@@ -11,12 +11,11 @@ import { HealthyPipe } from './healthy.pipe';
   pipes: [HealthyPipe],
   directives: [MealComponent, NewMealComponent, EditMealDetailsComponent],
   template: `
-
     <new-meal (onSubmitNewMeal)="createMeal($event)">
     </new-meal>
     <select (change)="onChange($event.target.value)" class="filter">
       <option value="all">All Meals</option>
-      <option value="healthy">Low Calorie</option>
+      <option value="healthy">Low Calories</option>
       <option value="unhealthy">High Calories</option>
     </select>
     <p class="today">Today's Meals:</p>
@@ -36,18 +35,13 @@ export class MealListComponent {
     this.onMealSelect = new EventEmitter();
   }
   createMeal([name, details, calories]): void {
-
     var newMeal = new Meal(name, details, calories);
-
     this.mealList.push(newMeal);
-
   }
   mealClicked(clickedMeal: Meal): void {
     this.selectedMeal = clickedMeal;
     this.onMealSelect.emit(clickedMeal);
-
   }
-
   onChange(filterOption) {
   this.filterHealthy = filterOption;
   }

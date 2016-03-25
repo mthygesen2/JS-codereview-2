@@ -14,7 +14,7 @@ import {Meal} from './meal.model';
       <label for="calories">Amount of calories</label>
       <input [(ngModel)]="meal.calories" type="number" placeholder="Amount of Calories" min="0" >
       <label for="comments">Details</label>
-      <input [(ngModel)]="meal.details" placeholder="Details of the meal">
+      <input class="detailsInput" type="text"  [(ngModel)]="meal.details" placeholder="Details of the meal">
     </div>
   </div>
   `

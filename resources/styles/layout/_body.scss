@@ -13,22 +13,24 @@ meal-list {
     padding:20px;
   }
   select {
-     -webkit-appearance: none;
-     -moz-appearance: none;
-     appearance: none;
-     @include size(200px, 50px);
-     @include font($uppercase-font);
-     //image is for caret in drop down must be positioned
-     background: url("https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-128.png") no-repeat;
-     background-position: 90% 60%;
-     background-size: 30px;
-     padding-left: 15px;
-     border-radius: 0;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   @include size(200px, 50px);
+   @include font($uppercase-font);
+   //image is for caret in drop down must be positioned
+   background: url("https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-128.png") no-repeat;
+   background-position: 90% 60%;
+   background-size: 30px;
+   padding-left: 15px;
+   border-radius: 0;
+   border: 1px solid $text-color;
   }
 }
 
 .meal-form {
   @extend %form;
+
 }
 
 .meal-edit-form {
@@ -38,6 +40,9 @@ meal-list {
     display: flex;
     flex-flow: row wrap;
     padding: 10px;
+    .detailsInput {
+
+    }
   }
   label {
     width: 250px;
