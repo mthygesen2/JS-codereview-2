@@ -12,7 +12,7 @@ import { HealthyPipe } from './healthy.pipe';
   directives: [MealComponent, NewMealComponent, EditMealDetailsComponent],
   template: `
     <select (change)="onChange($event.target.value)" class="filter">
-    <option value="all">All Meals<i class="fa fa-arrow-down"></i></option>
+    <option value="all">All Meals</option>
     <option value="healthy">Low Calorie</option>
     <option value="unhealthy">High Calories</option>
     </select>

@@ -1,0 +1,10 @@
+.brandName {
+  @include size(auto, auto);
+  align-self: center;
+  border: 1px solid black;
+  margin: 150px auto;
+  @include font($skinny-font, 2em, $brand-color);
+  letter-spacing: 1em;
+  padding-left: 1em;
+  // text-align: center;
+}
