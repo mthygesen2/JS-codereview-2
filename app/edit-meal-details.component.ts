@@ -6,11 +6,16 @@ import {Meal} from './meal.model';
   selector: 'edit-meal-details',
   inputs: ['meal'],
   template: `
-  <div class="meal-form">
-    <h2>Edit Meal</h2>
-    <input [(ngModel)]="meal.name" placeholder="Meal Name">
-    <input [(ngModel)]="meal.details" placeholder="Details of the meal">
-    <input [(ngModel)]="meal.calories" type="number" placeholder="Amount of Calories" min="0" >
+  <div class="meal-edit-form">
+    <h3>Edit Meal</h3>
+    <div class="editArea">
+      <label for="name">What did you have?</label>
+      <input [(ngModel)]="meal.name" placeholder="Meal Name">
+      <label for="calories">Amount of calories</label>
+      <input [(ngModel)]="meal.calories" type="number" placeholder="Amount of Calories" min="0" >
+      <label for="comments">Details</label>
+      <input [(ngModel)]="meal.details" placeholder="Details of the meal">
+    </div>
   </div>
   `
 })

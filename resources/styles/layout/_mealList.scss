@@ -19,7 +19,7 @@ meal-display {
       @extend %button;
       @include size(150px, 30px);
       align-self: flex-end;
-      margin-right: 100px;
+      margin: 0 100px 50px 0;
     }
   }
   &:last-child {

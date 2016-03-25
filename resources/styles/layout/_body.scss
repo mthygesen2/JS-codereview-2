@@ -1,7 +1,8 @@
 
 meal-list {
-  border: 1px solid yellow;
   background-color: rgba(white, 0.5);
+  max-width: 1200px;
+  min-width: 350px;
   margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
@@ -26,27 +27,26 @@ meal-list {
 }
 
 .meal-form {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
-  margin: 0 auto 25px auto;
-  @include font($skinny-font);
-  h2 {
-    @include font($uppercase-font, 1.8em, $brand-color);
-    font-weight: normal;
-    margin-top: 0;
-  }
-  input {
-    @include size(300px, 40px);
-    margin: 4px auto;
-  }
-  button {
-    @include size(150px, 40px);
-    margin: 4px auto;
-    @extend %button;
-  }
+  @extend %form;
 }
 
+.meal-edit-form {
+  @extend %form;
+  .editArea {
+    max-width: 850px;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+  }
+  label {
+    width: 250px;
+    align-self: center;
+    font-size: 1.2em;
+    @media screen and (min-width: 800px) {
+      padding-left: 50px;
+    }
+  }
+}
 .mealsInList {
   border-bottom: 1px solid black;
 
