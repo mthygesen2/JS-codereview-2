@@ -41,7 +41,6 @@ export class MealListComponent {
 
   }
   mealClicked(clickedMeal: Meal): void {
-    this.selectedMeal = !this.selectedMeal;
     this.selectedMeal = clickedMeal;
     this.onMealSelect.emit(clickedMeal);
 
