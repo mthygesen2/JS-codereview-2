@@ -18,6 +18,7 @@ meal-list {
      appearance: none;
      @include size(200px, 50px);
      @include font($uppercase-font);
+     //image is for caret in drop down must be positioned
      background: url("https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-128.png") no-repeat;
      background-position: 90% 60%;
      background-size: 30px;
@@ -46,8 +47,4 @@ meal-list {
       padding-left: 50px;
     }
   }
-}
-.mealsInList {
-  border-bottom: 1px solid black;
-
 }

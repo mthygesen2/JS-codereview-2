@@ -1,8 +1,10 @@
-$skinny-font: 'Poiret One', cursive;
+// $skinny-font: 'Poiret One', cursive;
 
-$serif-font: 'Playfair Display', serif;
+// $serif-font: 'Playfair Display', serif;
 
 $uppercase-font: 'Cinzel', serif;
+
+$skinny-font: 'Palanquin', sans-serif;
 
 $background-color:  #e6f3ff;
 
@@ -12,44 +14,3 @@ $brand-color: #D5595F;
 //
 // 8DC6C2
 $text-color: #051715;
-
-
-@mixin size($width, $height) {
-  width: $width;
-  height: $height;
-}
-
-@mixin font($family, $size:1em, $color:$text-color){
-  font-family: $family;
-  font-size: $size;
-  color: $color;
-}
-
-%button {
-  @include font($uppercase-font);
-  background: rgba(0,0,0,0.00);
-  border: 1px solid black;
-}
-
-%form {
-  display: flex;
-  flex-flow: column wrap;
-  width: 100%;
-  margin: 0 auto 25px auto;
-  border: 1px solid yellow;
-  @include font($skinny-font);
-  h2 {
-    @include font($uppercase-font, 1.8em, $brand-color);
-    font-weight: normal;
-    margin-top: 0;
-  }
-  input {
-    @include size(300px, 40px);
-    margin: 4px auto;
-  }
-  button {
-    @include size(150px, 40px);
-    margin: 4px auto;
-    @extend %button;
-  }
-}

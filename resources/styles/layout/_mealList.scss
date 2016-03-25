@@ -10,7 +10,7 @@ meal-display {
     margin-bottom: 0;
   }
   .mealInfo {
-    @include font($serif-font, 1.2em);
+    @include font($skinny-font, 1.2em);
     display: flex;
     flex-flow: column;
     padding: 0 20px;
@@ -25,4 +25,7 @@ meal-display {
   &:last-child {
     margin-bottom: 100px;
   }
+}
+.mealsInList {
+  border-bottom: 1px solid black;
 }
