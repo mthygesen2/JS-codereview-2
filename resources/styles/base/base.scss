@@ -1,5 +1,5 @@
 body {
-  width: 95%;
+
   margin: auto;
 }
 
@@ -16,30 +16,67 @@ body::after {
   z-index: -1;
 }
 
+.container {
+  display: flex;
+  flex-flow: column;
+  width: 90%;
+  margin: auto;
+}
+
 .brandName {
+  @include size(auto, auto);
+  align-self: center;
+  border: 1px solid black;
   margin: 150px auto;
-  color: $brand-color;
-  font-family: $skinny-font;
+  @include font($skinny-font, 2em, $brand-color);
   letter-spacing: 1em;
-  font-size: 4em;
-  font-weight: 800;
-  text-align: center;
+  padding-left: 1em;
+  // text-align: center;
 }
 
 meal-list {
-  font-family: $serif-font;
+  display: flex;
+  flex-flow: column wrap;
+  border: 1px solid yellow;
+  @include size(100%, auto);
     select {
    -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
-   width: 160px;
-   height: 50px;
+   @include size(200px, 50px);
+   @include font($uppercase-font);
    background: url("https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-128.png") no-repeat;
    background-position: 90% 60%;
    background-size: 30px;
    padding-left: 15px;
    border-radius: 0;
   }
+}
+
+.meal-form {
+  border: 1px solid red;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  margin: 25px auto;
+  @include font($skinny-font);
+  h2 {
+    @include font($uppercase-font, 1.8em, $brand-color);
+    font-weight: normal;
+    margin-top: 0;
+  }
+  input {
+    @include size(300px, 40px);
+    margin: 4px auto;
+  }
+  button {
+    @include size(150px, 40px);
+    margin: 4px auto;
+    @include font($uppercase-font);
+    background: rgba(0,0,0,0.00);
+    border: 1px solid #aaa;
+  }
+
 }
 .mealInfo p {
   display: none;

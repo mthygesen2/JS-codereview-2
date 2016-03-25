@@ -11,3 +11,14 @@ $brand-color: #D5595F;
 // #DE938D
 //
 // 8DC6C2
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($family, $size:1em, $color:black){
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+}

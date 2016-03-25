@@ -6,7 +6,7 @@ import {Meal} from './meal.model';
   outputs: ['onSubmitNewMeal'],
   template: `
   <div class="meal-form">
-    <h2>New Meal</h2>
+    <h2>add a meal</h2>
     <input placeholder="Meal Name" #newName>
     <input placeholder="Details of the meal" #newDetails>
     <input type="number" placeholder="Amount of Calories" min="0" #newCalories >
