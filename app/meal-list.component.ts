@@ -18,5 +18,16 @@ import { EditMealDetailsComponent } from './edit-meal-details.component';
 })
 export class MealListComponent {
   public mealList: Meal[];
+  public onMealSelect: EventEmitter<Meal>;
+  public selectedMeal: Meal;
+  constructor() {
+    this.onMealSelect = new EventEmitter();
+  }
+  createMeal([name, details, calories]): void {
 
+    var newMeal = new Meal(name, details, calories);
+
+    this.mealList.push(newMeal);
+
+  }
 }
