@@ -1,3 +1,11 @@
 h1 {
   color: blue;
 }
+
+.mealInfo p {
+  display: none;
+}
+
+.selected p {
+  display: block;
+}

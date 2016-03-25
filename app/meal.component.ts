@@ -9,9 +9,11 @@ import { EditMealDetailsComponent } from './edit-meal-details.component';
   directives: [EditMealDetailsComponent],
   template: `
   <div>
-    <h3>{{ meal.name }}</h3>
-    <p>{{ meal.details }}</p>
-    <p>{{ meal.calories }}</p>
+    <div class="mealInfo">
+    <h3> {{ meal.name }}</h3>
+      <p>{{ meal.calories }}</p>
+      <p>{{ meal.details }}</p>
+    </div>
     <button (click)="editInfo(meal)">Edit</button>
     <edit-meal-details *ngIf="show" [meal]="selectedMeal"></edit-meal-details>
   </div>
@@ -24,12 +26,10 @@ export class MealComponent {
   public selectedMeal: Meal;
   constructor() {
   this.onMealSelect = new EventEmitter();
-}
+  }
   editInfo(clickedMeal: Meal) :void {
     this.show = !this.show;
     console.log(this.selectedMeal);
     this.selectedMeal = clickedMeal
-    // this.onKegSelect.emit(clickedKeg);
   }
-
 }

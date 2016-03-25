@@ -19,6 +19,8 @@ import { HealthyPipe } from './healthy.pipe';
     <new-meal (onSubmitNewMeal)="createMeal($event)">
     </new-meal>
     <meal-display *ngFor="#currentMeal of mealList | healthy:filterHealthy"
+    (click)="mealClicked(currentMeal)"
+    [class.selected]="currentMeal === selectedMeal"
     [meal]="currentMeal" >
     </meal-display>
   `
@@ -38,6 +40,13 @@ export class MealListComponent {
     this.mealList.push(newMeal);
 
   }
+  mealClicked(clickedMeal: Meal): void {
+    this.selectedMeal = !this.selectedMeal;
+    this.selectedMeal = clickedMeal;
+    this.onMealSelect.emit(clickedMeal);
+
+  }
+
   onChange(filterOption) {
   this.filterHealthy = filterOption;
   }
