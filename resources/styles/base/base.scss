@@ -17,6 +17,7 @@ body::after {
 }
 
 .brandName {
+  margin: 150px auto;
   color: $brand-color;
   font-family: $skinny-font;
   letter-spacing: 1em;
@@ -25,6 +26,21 @@ body::after {
   text-align: center;
 }
 
+meal-list {
+  font-family: $serif-font;
+    select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   width: 160px;
+   height: 50px;
+   background: url("https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-08-128.png") no-repeat;
+   background-position: 90% 60%;
+   background-size: 30px;
+   padding-left: 15px;
+   border-radius: 0;
+  }
+}
 .mealInfo p {
   display: none;
 }
